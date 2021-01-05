@@ -2,6 +2,11 @@
 
 Course project for Aalto University course TU-C9270. Visualizing networks of Python dependencies in Github projects.
 
+<img src="img/spring_layout.png"></img>
+A network of 930 library nodes. Visualized by setting static positions for some of the libraries with the most dependencies and then using NetworkX spring layout for the rest
+<img src="img/dependencies.png"></img>
+The same network in a DAG styled layout with the direct dependencies (RED) and transitive dependencies (DARK RED) of a single library accentuated
+
 ### Setup
 1. Create a file called ".env" in the root of the project
 2. Get an OAuth2 token for your GitHub user (see https://docs.github.com/en/free-pro-team@latest/developers/apps/building-oauth-apps)
@@ -13,7 +18,7 @@ python libnet.py
 ```
 This builds a network of 10 library nodes and displays it with MatPlotLib and NetworkX
 <br></br>
-You can specify the size of the network by giving it as a parameter. For example
+You can also specify the desired size of the network by giving it as a parameter. For example
 ```
 python libnet.py 500
 ```
